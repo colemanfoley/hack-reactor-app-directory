@@ -1,6 +1,5 @@
-var apps = new Apps({});
-apps.add([{name: "Playlist Me", creator: "Coleman Foley", url: "http://playlist-me.meteor.com"}, 
-				 {name: "Instahood"}, {name: "Routrrr"}]);
+var apps = new Apps([{name: "Playlist Me", creator: "Coleman Foley", url: "http://playlist-me.meteor.com"}, 
+				 {name: "Instahood"}, {name: "Routrrr"}, {name: "Defacebook"}, {name: "Rooms"}, {name: "Test"}]);
 var mainView = new MainView({collection: apps});
 
 $(document).ready(function(){
