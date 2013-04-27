@@ -5,8 +5,7 @@ var AppView = Backbone.View.extend({
 
 	render: function  (argument) {
 		var compiled = _.template('<h3><a href="<%= url %>"><%= name %></a></h3>');
-		compiled({name : this.model.get("name")});
-		this.$el.html(compiled({name : this.model.get("name")}));
+		this.$el.html(compiled({name : this.model.get("name"), url: this.model.get("url")}));
 		this.$el.append("Made by: ");
 		this.$el.append(this.model.get("creator"));
 		return this.$el;
