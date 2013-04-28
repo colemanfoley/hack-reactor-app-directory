@@ -3,14 +3,19 @@ var AddView = Backbone.View.extend({
 	initialize: function(){
 		$(document).keypress(function(e) {
 	    if((e.which == 13) && $('#creatorInput').is(':focus') && $('#nameInput').val()){
-	      apps.add({name: $('#nameInput').val(), creator: $('#creatorInput').val()});
+	      apps.add({
+	      	name: $('#nameInput').val(),
+	      	creator: $('#creatorInput').val(),
+	      	url: "http://" + $('#urlInput').val()
+	      });
 	    }
 		});
 	},
   render: function(){
 		this.$el.html('<h1>Made At Hack Reactor</h1>');
 		var formHTML = 'Add an app.<br>' +
-			'<input id="nameInput" placeholder="Name of the app.">' +
+			'<input id="nameInput" placeholder="Name of the app">' +
+			'<input id="urlInput" placeholder="URL of the app">' +
 			'<input id="creatorInput" placeholder="Creator of the app">';
 		this.$el.append(formHTML);
     return this.$el;
