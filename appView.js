@@ -14,7 +14,6 @@ var AppView = Backbone.View.extend({
 			this.$el.html(compiled({name : this.model.get("name"),
 				url: this.model.get("url"), creator: this.model.get("creator")}));
 		}
-
 		return this.$el;
 	}
 });
