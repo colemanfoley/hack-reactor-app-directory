@@ -1,5 +1,8 @@
 var App = Backbone.Model.extend({
-	url: ""
+	defaults: {
+		"url": "",
+		"creator": "N/A"
+	}
 });
 
 var Apps = Backbone.Collection.extend({model: App});

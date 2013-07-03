@@ -13,10 +13,12 @@ var AddView = Backbone.View.extend({
 	},
   render: function(){
 		this.$el.html('<h1>Made At Hack Reactor</h1>');
-		var formHTML = 'Add an app.<br>' +
+		var formHTML = '<form id="addApp" name="addApp">' +
 			'<input id="nameInput" placeholder="Name of the app">' +
 			'<input id="urlInput" placeholder="URL of the app">' +
-			'<input id="creatorInput" placeholder="Creator of the app">';
+			'<input id="creatorInput" placeholder="Creator of the app">' +
+			'</form>';
+
 		this.$el.append(formHTML);
     return this.$el;
   }

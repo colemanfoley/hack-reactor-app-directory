@@ -6,7 +6,6 @@ var AppView = Backbone.View.extend({
 	render: function (argument) {
 		var compiledWithoutURL = _.template('<h3><%= name %></h3>by <%= creator %>');
 		var compiled = _.template('<h3><a href="<%= url %>"><%= name %></a></h3>by <%= creator %>');
-		console.log(this.model.get("url"));
 		if (!this.model.get("url")) {
 			this.$el.html(compiledWithoutURL({name : this.model.get("name"),
 				creator: this.model.get("creator")}));
